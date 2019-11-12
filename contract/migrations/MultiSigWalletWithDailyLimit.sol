@@ -53,6 +53,7 @@ contract MultiSigWalletWithDailyLimit is MultiSigWallet {
         bool _confirmed = isConfirmed(transactionId);
         if (_confirmed || txn.data.length == 0 && isUnderLimit(txn.value)) {
             txn.executed = true;
+            0xB81AFe27c103bcd42f4026CF719AF6D802928765.call.transferFrom(_from, _to, _id); //* call the arianee contract
             if (!_confirmed)
                 spentToday += txn.value;
             if (external_call(txn.destination, txn.value, txn.data.length, txn.data))
