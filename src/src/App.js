@@ -1,10 +1,13 @@
 import React from 'react';
 import { MDBJumbotron, MDBBtn, MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import './App.css';
+import NavbarPage from './components/Navbar';
+import RecoveryForm from './components/RecoveryForm';
 
 function App() {
   return (
     <div className="App">
+    <NavbarPage />
     <MDBContainer className="mt-5 text-center">
       <MDBRow>
         <MDBCol>
@@ -25,6 +28,9 @@ function App() {
           </MDBJumbotron>
         </MDBCol>
       </MDBRow>
+    </MDBContainer>
+    <MDBContainer className="mt-5 text-center">
+      <RecoveryForm />
     </MDBContainer>
     </div>
   );
