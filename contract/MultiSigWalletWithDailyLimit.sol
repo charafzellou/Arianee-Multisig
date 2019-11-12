@@ -3,7 +3,6 @@ import "./MultiSigWallet.sol";
 
 
 /// @title Multisignature wallet with daily limit - Allows an owner to withdraw a daily limit without multisig.
-/// @author Stefan George - <stefan.george@consensys.net>
 contract MultiSigWalletWithDailyLimit is MultiSigWallet {
 
     /*

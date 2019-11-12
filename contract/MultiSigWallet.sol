@@ -2,7 +2,6 @@ pragma solidity ^0.4.15;
 
 
 /// @title Multisignature wallet - Allows multiple parties to agree on transactions before execution.
-/// @author Stefan George - <stefan.george@consensys.net>
 contract MultiSigWallet {
 
     /*
@@ -230,6 +229,7 @@ contract MultiSigWallet {
         if (isConfirmed(transactionId)) {
             Transaction storage txn = transactions[transactionId];
             txn.executed = true;
+            // transaction
             if (external_call(txn.destination, txn.value, txn.data.length, txn.data))
                 Execution(transactionId);
             else {
