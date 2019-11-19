@@ -14,6 +14,10 @@ const productStyle = {
   },
   description: {
     color: "#999"
+  },
+  speciale: {
+    textAlign: "center",
+    display: "block"
   }
 };
 
